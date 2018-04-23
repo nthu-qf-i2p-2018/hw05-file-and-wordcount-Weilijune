@@ -1,11 +1,8 @@
 # -*- coding: utf-8 -*-
-# -*- coding: utf-8 -*-
 
-
-
-def main(file):
+def main(filename):
     # read file into lines
-    txtfile=open(file)
+    txtfile=open(filename)
     lines = txtfile.readlines()
 
     # declare a word list
@@ -31,6 +28,7 @@ def main(file):
     # compute word count from all_words
     from collections import Counter
     counter = Counter(all_words)
+    counter.most_common()
 
     # dump to a csv file named "wordcount.csv":
     # word,count
