@@ -44,8 +44,7 @@ def main(filename):
         # write table head
         writer.writerow(['word', 'count'])
         # write all (word, count) pair into the csv writer
-        for i in all_words:
-            writer.writerow([i,all_words.count(i)])
+        writer.writerows(counter.most_common())
         csv_file.close()
 
     # dump to a json file named "wordcount.json"
